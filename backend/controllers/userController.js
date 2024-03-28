@@ -17,7 +17,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
       password,
       
     });
-     sendToken(user, 201, res);
+      sendToken(user, 201, res);
   });
 
 
@@ -42,7 +42,8 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
       return next(new ErrorHandler("Invalid Email or Password", 401));
     }
     
-    sendToken(user, 200, res);
+     sendToken(user, 200, res);
+    
   });
 
 

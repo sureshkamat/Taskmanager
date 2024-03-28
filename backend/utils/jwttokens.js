@@ -13,5 +13,7 @@ const sendToken=(user,statusCode,res)=>{
     .status(statusCode)
     .cookie("token", token, options)
     .send({ success: true, user, token });
+    
+   
 }
 module.exports=sendToken;
