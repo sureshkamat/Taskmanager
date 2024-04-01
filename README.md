@@ -38,17 +38,16 @@ To run this project locally, follow these steps:
 # API Endpoints
 
 ## Users
-POST /api/v1/register: Register a new user
-POST /api/v1/login: Login user
-GET /api/v1/logout: Logout user
-GET /api/v1/me: Get user details
+- POST /api/v1/register: Register a new user
+- POST /api/v1/login: Login user
+- GET /api/v1/logout: Logout user
+- GET /api/v1/me: Get user details
 
 ## Tasks
-GET /api/v1/tasks: Get all tasks onlu logined users data
-
-POST /api/v1/tasks/new: Create a new task
-PUT /api/v1/task/:id: Update task
-DELETE /api/v1/task/:id: Delete task
+- GET /api/v1/tasks: Get all tasks onlu logined users data
+- POST /api/v1/tasks/new: Create a new task
+- PUT /api/v1/task/:id: Update task
+- DELETE /api/v1/task/:id: Delete task
 
 # Deployed Application
   ## Backend APIs
