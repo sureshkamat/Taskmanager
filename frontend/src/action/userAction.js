@@ -43,8 +43,8 @@ export const register = (userData) => async (dispatch) => {
       };
   
       const { data } = await axios.post(`http://localhost:4000/api/v1/register`, userData, config); // Use relative URL
-      console.log(data);
-      dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
+     
+      dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
     } catch (error) {
      // Log the full error object for debugging purposes
       dispatch({

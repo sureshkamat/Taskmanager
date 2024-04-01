@@ -14,7 +14,7 @@ export const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  console.log(useSelector(state=>state));
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your login logic here
