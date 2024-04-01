@@ -22,7 +22,7 @@ import {
         type: ALL_TASK_REQUEST,
       });
       
-      const { data } = await axios.get(`http://localhost:4000/api/v1/tasks`, {
+      const { data } = await axios.get(`https://taskmanager-4ytt.onrender.com/api/v1/tasks`, {
       headers: {
         'authorization': `Bearer ${token}`
       },
@@ -51,7 +51,7 @@ export const createTask = (taskData,token) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/api/v1/tasks/new`,
+      `https://taskmanager-4ytt.onrender.com/api/v1/tasks/new`,
       taskData,
       config
     );
@@ -81,7 +81,7 @@ export const deleteTask = (id,token) => async (dispatch) => {
       'authorization': `Bearer ${token}`
     },
     };
-    const  {data}  = await axios.delete(`http://localhost:4000/api/v1/task/${id}`,config);
+    const  {data}  = await axios.delete(`https://taskmanager-4ytt.onrender.com/api/v1/task/${id}`,config);
     
 
     dispatch({
@@ -111,7 +111,7 @@ export const updateTask = (id,taskData,token) => async (dispatch) => {
       'authorization': `Bearer ${token}`
     },
     };
-    const  {data}  = await axios.put(`http://localhost:4000/api/v1/task/${id}`, taskData,config);
+    const  {data}  = await axios.put(`https://taskmanager-4ytt.onrender.com/api/v1/task/${id}`, taskData,config);
     
 console.log(data);
     dispatch({

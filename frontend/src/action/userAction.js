@@ -23,7 +23,7 @@ export const login = (userData) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `http://localhost:4000/api/v1/login`,
+      `https://taskmanager-4ytt.onrender.com/api/v1/login`,
       userData,
       config
     );
@@ -42,7 +42,7 @@ export const register = (userData) => async (dispatch) => {
         headers: { "Content-Type": "application/json" },
       };
   
-      const { data } = await axios.post(`http://localhost:4000/api/v1/register`, userData, config); // Use relative URL
+      const { data } = await axios.post(`https://taskmanager-4ytt.onrender.com/api/v1/register`, userData, config); // Use relative URL
      
       dispatch({ type: REGISTER_USER_SUCCESS, payload: data });
     } catch (error) {
@@ -70,7 +70,7 @@ export const loadUser = () => async (dispatch) => {
   
   export const logout = () => async (dispatch) => {
     try {
-      await axios.get(`http://localhost:4000/api/v1/logout`);
+      await axios.get(`https://taskmanager-4ytt.onrender.com/api/v1/logout`);
       dispatch({type:LOGOUT_SUCCESS});
   
     } catch (error) {
