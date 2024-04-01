@@ -12,12 +12,12 @@ export const Navbar = () => {
        <Link to='/'> <h1>Task Manager</h1></Link>
       </Box>
       <Spacer />
-      {isAuthenticated?<Box>
-        <Text>Welcome,{user.name}</Text>
-        <Button colorScheme="white" variant="link" onClick={()=>dispatch(logout())}>Logout</Button>
-      </Box>:
+      {isAuthenticated?<Flex alignItems={"center"} gap={10}>
+        <Text>Welcome,    {user.name}</Text>
+        <Button colorScheme="white"  variant='outline'onClick={()=>dispatch(logout())}>Logout</Button>
+      </Flex>:
       <Box>
-      <Link to='/login'><Button colorScheme="white" variant="link">Login</Button></Link>
+      <Link to='/login'><Button colorScheme="white" variant='outline'>Login</Button></Link>
     </Box>}
     </Flex>
   );

@@ -26,7 +26,7 @@ export const Tasks = () => {
     priorities, size, sort
   }
 
-  console.log(loading)
+
 
 
 
@@ -68,7 +68,7 @@ export const Tasks = () => {
         </Button>
         </Center>
           <Center >
-            <Flex justifyContent="space-around" gap={5} margin={"auto"} m={5}>
+            <Flex justifyContent="space-around" gap={5} margin={"auto"} m={5} direction={{ base: 'column', md: 'row' }}>
 
               <Input placeholder='Search' onChange={(e) => setSearchedText(e.target.value)} />
               <Button onClick={() => setSearch(searchedText)} ml={5} mr={5}>Search</Button>
